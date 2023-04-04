@@ -6,7 +6,7 @@ WYSIWYM - **What You See Is What You Mean**. zijn softwares die voornamelijk gef
 
 WYSIWYG - **What You See Is What You Get**. zijn applicaties die gefocussed zijn voor mensen die content willen maken dat gelijk representatief is op het eindproduct. Zoals word, canva of wordpress
 
-Comments command zelf geleerd Bijv: ![Comment](Comments.png) 
+Comments command zelf geleerd Bijv: `[//]: # (comment hier)`
 ## Opdracht
 
 ### Gebruikte bronnen
@@ -24,6 +24,4 @@ Mijn hele markdown file staat in mijn repository met de genoemde benodigdheden.
   - Level 1 header door # bij het begin van een paraaf te zetten
   - Level 2 header ## bij het begin van een paraaf te zetten
   - Codeblok  door de code in te sluiten met drie tickjes ```
-  - en een link maken met: ```[title](link)```
-
-[//]: # (comment hier)
+  - en een link maken met: `[title](link)`

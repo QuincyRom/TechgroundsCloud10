@@ -26,17 +26,17 @@ Het voornamelijke probleem waar ik achter kwam is het vinden van een manier om a
 
 ### Resultaat
 - **het maken van mijn 2 repositories staat nu in mijn github."(zie bijlage)"**
-![Screenshot Repos](Repositories.png)
+![Screenshot Repos](/00_includes/Repositories.png)
 
 - **het pushen van de code heb ik gedaan door een html file te maken in visual studio en dat dan te pushen door de commit en push knop te drukken in de source control**
 
-![Push method](Pushing.png)
+![Push method](/00_includes/Pushing.png)
 
 - __De permissies zijn ook gegeven door naar de settings te gaan en de colaborators to te voegen__
-![Screenshot colabs](Colaborators.png)
+![Screenshot colabs](/00_includes/Colaborators.png)
 
 - ook zijn de notities gepushed in mijn tweede repository
-![Notities](NotitiesPushed.png)
+![Notities](/00_includes/NotitiesPushed.png)
 
 - En hierbij ook de link naar mijn testing repository: https://github.com/QuincyRom/PortofolioQuin
 
