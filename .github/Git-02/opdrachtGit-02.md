@@ -20,7 +20,7 @@ Het maken van een codeblok was een klein probleem. maar na een beetje googlen kw
 [//]: # (leg eventjes uit wat het was) 
 
 ### Resultaat
-Mijn hele markdown file staat in mijn repository met de genoemde benodigdheden.
+Mijn hele markdown file staat in mijn repository met de genoemde benodigdheden. [Markdownfile](Markdown.md)
   - Level 1 header door # bij het begin van een paraaf te zetten
   - Level 2 header ## bij het begin van een paraaf te zetten
   - Codeblok  door de code in te sluiten met drie tickjes ```
