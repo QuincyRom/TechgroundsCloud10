@@ -1,5 +1,5 @@
-# [Onderwerp]
-[Geef een korte beschrijving van het onderwerp]
+# Working with text (CLI)
+Leren om met meer commands en syntaxes om te gaan.
 
 ## Key-terms
 Echo command - echo laat een string of tekst die als een argument door gaan. kan je ook gebruiken om extra tekst toe te voegen aan een file door append (>>) te gebruiken. append betekend toevoeging.
