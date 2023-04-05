@@ -8,7 +8,7 @@ Sudo command - zorgt ervoor dat je tijdelijk hogere rechten hebt om acties uit t
 
 sudo bash command - om permanent als superuser te kunnen operaten
 
-less command - om de text file te kunnen lezen en Q om er weer uit te gaan
+less, cat of more command - om de text file te kunnen lezen en Q om er weer uit te gaan
 
 PWD command - om de plaats waar ik werk weer te geven.
 
@@ -21,6 +21,10 @@ Touch command - om een file aan te maken
 Absolute path - de hele path naar een directory/file beginnend met de root met een /
 
 Relative path - het path naar een file/directory dat relatief naar het directory waar je in werkt.
+
+cat > command - om text in een file te schrijven. en CTRL + D om het te saven
+
+cat command - kan voor veel verschillende dingen gebruikt worden. waaronder het zien van de tekst en het schrijven van een tekst.
 
 [//]: # (kern woorden die we tegenkomen)
 
