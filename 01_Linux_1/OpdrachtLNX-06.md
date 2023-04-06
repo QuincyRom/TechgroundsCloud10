@@ -17,7 +17,11 @@ systeem ctl - start,stop,restart is voor het besturen van die processen. disable
 inetd - is een super-server daemon. dat voor internet services zorgt
 ## Opdracht
 ### Gebruikte bronnen
-https://www.prajwaldesai.com/enable-telnet-on-windows-11-disable-telnet/#:~:text=Install%20Telnet%20on%20Windows%2011%20using%20PowerShell&text=Right%2Dclick%20Windows%20PowerShell%20and,Telnet%20client%20on%20Windows%2011.
+[telnet installeren](https://askubuntu.com/questions/439574/telnet-server-not-starting)
+
+[everything about daemons](https://www.youtube.com/watch?v=wOWhfNB_r-0)
+
+
 
 ### Ervaren problemen
 Het was relatief moeilijk om deze opdracht te begrijpen. Maar we moesten het van een ander perspectief bekijken en ik dacht verder dan nodig was. Hierdoor hoefte ik eigenlijk maar 2 dingen te doen en was ik zo klaar.
