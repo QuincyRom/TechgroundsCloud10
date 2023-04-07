@@ -57,6 +57,7 @@ Resultaat
 ![Resultaat script httpd](/00_includes/install-httpdp2.png)
 
 
+
 - **Met de variable RANDOM kunnen we een willekeurige variable uitkiezen. dus we gaan dit in onze script gebruiken. We maken eerste de variable random_number dat we een betekenis geven `$((1 + RANDOM % 10))`. De 1 zorgt ervoor dat we niet onder de 0 komen, het "%" zorgt ervoor dat we een modulair getal hebben. en de 10 zorgt ervoor dat we niet niet boven de 10 uitkomen.**
 
     **Dan sturen we het uitkomst naar een nieuwe file dat random_numbers.txt heet. En laten we voor het gemak het uitprinten op de terminal zodat we de file niet open hoeven te doen om het antwoord te zien.**
