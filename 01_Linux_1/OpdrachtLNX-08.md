@@ -22,9 +22,13 @@ Cron bleekt niet geinstalleerd te zijn dus dat heb ik even snel geïnstalleerd m
 
 ![date cron script](/00_includes/datecron-script.png)
 
- - **dan maken we in de crontab een cronjob zodat het elke minuut aangeeft wat de tijd en datum zijn in een file genaamt datum_nu.txt.**
+ - **dan maken we in de crontab een cronjob zodat het onze script om de minuut runt. Dit doen we met de command `crontab -e` in te voeren zodat we in de tekst editor van de crontab kunnen komen.**
+
+    **Hier typen we de regelmaat van onze script. In dit geval is dat om de minuut, dus we typen `* * * * *` sterretjes in om dit aan te geven en dan de path naar de script die we willen runnen die in dit voorbeeld in `/home/quincy/techgrounds/scripts/cronnie.sh` zit.**
  
  ![crontab](/00_includes/crontab-edit.png)
+
+ **Nu dit is opgezet, slaan we het op en zal de cron gelijk aan het werk gaan en nogmaals wanneer de aangegeven tijd weer komt.**
 
 - **We maken nog een extra cronjob waarbij we weekelijks de disk informatie in een log file zetten.**
 
