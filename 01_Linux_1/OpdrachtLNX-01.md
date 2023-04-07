@@ -25,10 +25,13 @@ Het connecten van mijn linux omgeving was wel een uitdaging. waarbij mijn peers 
 
 ### Resultaat
 - **het installeren van de SSH client en SSH server in settings>apps>optional features.**
+
 ![Settings](/00_includes/Settings.png)
 
 - **Het Connecten van mijn SSH-connectie naar mijn VM.**
+
 ![connection](/00_includes/Powershell-login.png)
 
 - **het laten zien van mijn username door gebruik te maken van de command whoami**
+
 ![username](/00_includes/connectionSSH.png)

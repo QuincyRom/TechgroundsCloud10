@@ -31,6 +31,7 @@ groupadd - Zorgt ervoor dat we een nieuwe group aan het systeem toe te kunnen vo
 ![file perm](/00_includes/Viewing-perms.png)
 
 de file permissie structuur werkt is in deze bijlage goed te zien. 
+
 ![file permissions structure](/00_includes/File-perm-structure.png)
 
 **Door de command `sudo chmod u=rwx perms.txt` te gebruiken. Veranderen we de permissies van de u (dat User/owner is) zodat het de RWX permissions heeft. door het geven van de X permission. zorgt het ervoor dat de file een exe word.**

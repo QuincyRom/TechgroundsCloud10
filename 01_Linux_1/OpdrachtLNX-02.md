@@ -45,15 +45,19 @@ Het vinden van een vershil tussen absolute en relative paths was wel een uitdagi
 ### Resultaat
 
 - **Het gebruik van de 'PWD' command**
+
 ![PWD en listing](/00_includes/PWD.png)
 
 - **Gebruik gemaakt van de 'mkdir' command**
+
 ![Techgrounds aangemaakt](/00_includes/Techgrounds-file.png)
 
 - **Gebruik gemaakt van de 'touch' command**
+
 ![textfilegemaakt](/00_includes/textfilegemaakt.png)
 
 - **Het bovenste word gebruikt gemaakt van een relative path en daar onder de absolute path.**
+
 ![relative and absolute](/00_includes/Relative-and-Absolute.png)
 
 
