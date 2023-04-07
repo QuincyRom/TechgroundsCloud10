@@ -1,15 +1,42 @@
-# [Onderwerp]
-[Geef een korte beschrijving van het onderwerp]
+# Cron Jobs
+Het creëren van processen perodiek terugkomen
 
 ## Key-terms
-[Schrijf hier een lijst met belangrijke termen met eventueel een korte uitleg.]
+Crontab - is de plek waar je alle cronjobs in zet deze kan je editen met `crontab -e`
+
+Cronjob - een cronjob is een taak die regelmatig opgeroepen kan worden. dit kan dagelijks, wekelijks en maandelijks 
 
 ## Opdracht
 ### Gebruikte bronnen
-[Plaats hier de bronnen die je hebt gebruikt.]
+[Cronjobs](https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-ubuntu-1804)
+
+[Cronjobs2](https://www.cyberciti.biz/faq/how-do-i-add-jobs-to-cron-under-linux-or-unix-oses/)
+
+
 
 ### Ervaren problemen
-[Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]
-
+Cron bleekt niet geinstalleerd te zijn dus dat heb ik even snel geïnstalleerd met de command `sudo apt install cron` en daarna `sudo systemctl enable cron` zodat cron altijd met de boot opstart.
 ### Resultaat
-[Omschrijf hoe je weet dat je opdracht gelukt is (gebruik screenshots waar nodig).]
+
+- **allereerst maken we de script om ervoor te zorgen dat er een nieuwe file word gemaakt en ingevuld word met de datum en tijd. die is hier onder in de screenshot te zien.**
+
+![date cron script](/00_includes/datecron-script.png)
+
+ - **dan maken we in de crontab een cronjob zodat het elke minuut aangeeft wat de tijd en datum zijn in een file genaamt datum_nu.txt.**
+ 
+ ![crontab](/00_includes/crontab-edit.png)
+
+- **We maken nog een extra cronjob waarbij we weekelijks de disk informatie in een log file zetten.**
+
+De script
+
+![logger script](/00_includes/loggerscript.png)
+
+De crontab om ervoor te zorgen dat het elke week op maandag 9 uur s'ochtends begint.
+
+![crontab logger](/00_includes/crontab-logger.png)
+
+Resultaat
+
+![logger resultaat](/00_includes/logger-resultaat.png)
+
