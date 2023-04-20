@@ -18,8 +18,7 @@ PoLP - *Principle of Least Privilege*
 [MFA en 3FA](https://rublon.com/blog/what-is-3fa-three-factor-authentication/#:~:text=Three%2DFactor%20Authentication%20(3FA),have%2C%20and%20something%20you%20are.)
 
 ### Ervaren problemen
-[Geef een korte beschrijving van de problemen waar je tegenaan bent gelopen met je gevonden oplossing.]
-
+Eigenlijk was dit een best simpel concept om te begrijpen 
 ### Resultaat
 **Verschil tussen authenticatie en authorisatie. En de MFA**
 
