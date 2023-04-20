@@ -4,7 +4,7 @@ Het gebruik en maken van certificaten.
 ## Key-terms
 PKI - *Public Key Infrastructure* is een systeem van processen, technologieën en beleidsregels waarmee u gegevens kunt versleutelen en ondertekenen. U kunt het gebruiken voor het uitgeven van digitale certificaten voor het authenticeren van gebruikers, apparaten en services.
 
-TLS - is een cryptograpic protocol dat ontworpen is om data te encrypten die over het internet gaan zodat hackers niet kunnen zien wat voor data gestuurd word. perfect voor gevoelige info zoals creditcards, wachtwoorden en gevoelige emails.
+TLS - SSL is kort voor Secure Sockets Layer. Een nieuwe versie, Transport Layer Security (TLS), is ondertussen ontwikkeld, maar over het algemeen noemen we dit protocol nog steeds SSL. Het SSL-protocol bestaat sinds 1995 en zorgt voor een beveiligde verbinding tussen de bezoeker van een website en de server van die website.
 
 Self signed certificate - Zijn public key certificates die niet gegeven worden door de CA (certificate authority) deze zijn makkelijk te maken en kosten geen geld. Maar ze hebben geen vertrouwensfactor.
 
@@ -66,7 +66,7 @@ hieronder de verschillende structuren van bedrijven.
 
 ![twitch path](/00_includes/twitch-certificate.png)
 
-Ook in je systeem heb je vertrouwde certificaten die goed bekend zijn. door `Windows toets + R` de drukken en `certmgr.msc` in te voeren krijg je een venster met de certificates op de current user. en dan heb je een directory met Trusted Root Certification Authorities.
+Ook in je systeem heb je vertrouwde certificaten die goed bekend zijn. Door `Windows toets + R` de drukken en `certmgr.msc` in te voeren krijg je een venster met de certificates op de current user. en dan heb je een directory met Trusted Root Certification Authorities.
 
 ![system certificates](/00_includes/System-certificates.png)
 

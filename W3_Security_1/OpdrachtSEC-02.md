@@ -8,7 +8,7 @@ Ufw - *Uncomplicated Firewall* De standaard firewall configuratie
 
 ## Opdracht
 ### Gebruikte bronnen
-[Plaats hier de bronnen die je hebt gebruikt.]
+[Setup firewall](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-firewall-with-ufw-on-ubuntu-20-04)
 
 ### Ervaren problemen
 Het zoeken van mijn website na het installeren van apache was voor mij heel moeilijk. uiteindelijk heeft Roan het voor mij verklapt.
