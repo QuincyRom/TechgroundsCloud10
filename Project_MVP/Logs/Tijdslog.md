@@ -68,7 +68,15 @@ Leren van cdk na examen en deployen van een bucket
 ## Obstakels
 Het beginnen van het leren van de code
 
+## learnings
 
+  #### The code that defines your stack goes here
+
+        # example resource
+        # queue = sqs.Queue(
+        #     self, "ProjectMvpQueue",
+        #     visibility_timeout=Duration.seconds(300),
+        # )
 
 - `npm install -g aws-cdk`
 - install the requirements.txt met `python -m pip install -r requirements.txt` 
