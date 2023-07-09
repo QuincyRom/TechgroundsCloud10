@@ -4,7 +4,7 @@
 | ----------- | ----------- |
 |Configure vm disk encryption |	EBS block store or KMS
 |implementing/Automated Web server installation|Elastic beanstalk, CloudFormation, EC2 Userdata
-|Implementing Admin/Management Server|	What Service do i need for this?
+|Implementing Admin/Management Server|	EC2 Instance met Windowsserver
 |Public IP for Admin/Management Server|Allocating an Elastic IP in AWS
 |Restrict acces to admin/management server|What Service do i need for this?
 |S3 bucket to store bootstrap/postdeplyment scripts|	S3 bucket
