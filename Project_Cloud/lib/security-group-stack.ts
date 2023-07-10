@@ -1,8 +1,10 @@
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
 import { Construct} from 'constructs'
 
 export class SecurityGroupStack extends cdk.Stack {
+    public readonly webServerSecurityGroup: ec2.SecurityGroup;
+
   constructor(scope: Construct, id: string, vpc: ec2.Vpc, props?: cdk.StackProps) {
     super(scope, id, props);
 
