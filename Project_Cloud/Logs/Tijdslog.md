@@ -211,7 +211,7 @@ uitvogelen hoe ik deze encryptie ga volgen
 
 
 ## Dagverslag (1 zin)
-Opnieuw beginnen en het initialiseren van typescript in een nieuw project. Druk is wat minder nu ik niet gehaast naar de sprint review moet werken.
+Opnieuw beginnen en het initialiseren van typescript in een nieuw project. Druk is wat minder nu ik niet gehaast naar de sprint review moet werken. De omgeving  
 
 ## Obstakels
 Geen kennis van Typescript.

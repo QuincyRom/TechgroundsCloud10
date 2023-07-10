@@ -44,5 +44,18 @@ Ik heb een paar goede tips ontvangen waarvan de grootste Chat GPT is. Ik heb het
  Vandaag besloten om opnieuw te beginnen in Typescript. Ik laat wat ik al heb gedaan staan en zal dit als referentie punt gebruiken om makkelijker met typescript onderweg te gaan
 
  # 29-06-2023
- # 30-06-2023
+ Typescript init gedaan, de omgeving staat klaar. er zijn best veel resources over typescript, echter zit ik nog steeds met het probleem dat cdk v2 relatief nieuw is dus heel veel dingen zijn 'depreciated' waardoor ik een andere oplossing ervoor moet vinden.
+
+
+ # 03-07-2023
+ Vpc staat klaar met de basic benodigdheden vraag me steeds af hoe ik dit in eigenmodules moet doen.
+ # 04-07-2023
+
+ # 05-07-2023
+
+ # 06-07-2023
+
+ # 07-07-2023
+
+
 

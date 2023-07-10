@@ -1,4 +1,4 @@
-# Migrate to the cloud, A working MVP
+# Migrate to the cloud, A working MVP 
 
 | Task    | How?? |
 | ----------- | ----------- |
@@ -12,5 +12,6 @@
 |IP ranges van 10.10.10.0/24 & 10.20.20.0./24|	VPC
 |SSH of RDP verbindingen met de webserver mogen alleen tot stand komean vanuit de admin server|	VPC
 Setup proxy voor webserver | Elastic load balancer
+De load van de webserver hendelen | Autoscaler
 |[Daily] Time logs	
 |[Daily] Beslissingen documentatie	
