@@ -6,28 +6,27 @@ export class VpcStack extends cdk.Stack {
     public readonly vpc: ec2.Vpc;
     public readonly publicSubnetIds: string[];
     public readonly privateSubnetIds: string[];
+  static vpc: any;
   
     constructor(scope: Construct, id: string, props?: cdk.StackProps) {
       super(scope, id, props);
       
-     
- 
-      
-     
+     //Vpc create, 2 AZ's, 2 public subnets, 2 private
       const vpc = new ec2.Vpc(this, 'MyVPC', {
-        ipAddresses: ec2.IpAddresses.cidr('10.0.0.0/16'),
-        natGateways: 2,
+        vpcName:'Proj_VPC',
+        ipAddresses: ec2.IpAddresses.cidr('10.0.0.0/24'),
+        natGateways: 0,
         maxAzs: 2,
         subnetConfiguration: [
           {
-            cidrMask: 24,
-            name: 'Private',
-            subnetType: ec2.SubnetType.PRIVATE_WITH_EGRESS,
+            
+            name:'ProjVpcPrivate',
+            subnetType: ec2.SubnetType.PRIVATE_ISOLATED,
       
           },
           {
-            cidrMask: 24,
-            name: 'Public',
+            
+            name: 'ProjVpcPublic',
             subnetType: ec2.SubnetType.PUBLIC,
         
           },
@@ -35,9 +34,58 @@ export class VpcStack extends cdk.Stack {
         enableDnsHostnames: true,
         enableDnsSupport: true,
       });
-  
-      this.vpc = vpc;
-      this.publicSubnetIds = vpc.selectSubnets({ subnetType: ec2.SubnetType.PUBLIC }).subnetIds;
-      this.privateSubnetIds = vpc.selectSubnets({ subnetType: ec2.SubnetType.PRIVATE_WITH_EGRESS }).subnetIds;
+      //private subnet NACL
+      const privatenacl = new ec2.NetworkAcl(this, 'PrivateNetworkAcl', {
+        vpc,
+        subnetSelection: {subnetType: ec2.SubnetType.PRIVATE_ISOLATED}
+
+      });
+    
+      // Add inbound and outbound rules to the Network ACL
+      // (Replace the rule properties with your desired configurations)
+      privatenacl.addEntry('AllowHTTPInbound', {
+        ruleNumber: 100,
+        cidr: ec2.AclCidr.anyIpv4(),
+        traffic: ec2.AclTraffic.tcpPort(80),
+        direction: ec2.TrafficDirection.INGRESS,
+        ruleAction: ec2.Action.ALLOW,
+      });
+    
+      privatenacl.addEntry('AllowHTTPsOutbound', {
+        ruleNumber: 100,
+        cidr: ec2.AclCidr.anyIpv4(),
+        traffic: ec2.AclTraffic.tcpPort(443),
+        direction: ec2.TrafficDirection.EGRESS,
+        ruleAction: ec2.Action.ALLOW,
+      });
+      //Public nacl
+      const publicnacl = new ec2.NetworkAcl(this, 'PublicNetworkAcl', {
+        vpc,
+        subnetSelection: {subnetType: ec2.SubnetType.PUBLIC}
+
+      });
+    
+      // Add inbound and outbound rules to the Network ACL
+      // (Replace the rule properties with your desired configurations)
+      publicnacl.addEntry('AllowHTTPInbound', {
+        ruleNumber: 100,
+        cidr: ec2.AclCidr.anyIpv4(),
+        traffic: ec2.AclTraffic.tcpPort(80),
+        direction: ec2.TrafficDirection.INGRESS,
+        ruleAction: ec2.Action.ALLOW,
+      });
+    
+      publicnacl.addEntry('AllowHTTPsOutbound', {
+        ruleNumber: 100,
+        cidr: ec2.AclCidr.anyIpv4(),
+        traffic: ec2.AclTraffic.tcpPort(443),
+        direction: ec2.TrafficDirection.EGRESS,
+        ruleAction: ec2.Action.ALLOW,
+      });
+    
+    
+      
+   
+
     }
   }

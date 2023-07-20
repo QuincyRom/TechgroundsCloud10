@@ -12,20 +12,7 @@ export class WebServerStack extends cdk.Stack {
 
     constructor(scope: Construct, id: string, vpc: ec2.Vpc, securityGroup: ec2.SecurityGroup, scriptBucket: s3.Bucket, props?: cdk.StackProps) {
         super(scope, id, props);
-      
-    this.scriptBucket = scriptBucket;
 
-    // Dit gedeelte uload naar de bucket.
-//const scriptAsset = new s3.Asset(this, 'ScriptAsset', {
-  //  path: '/path/to/bootstrap-script.sh', // Adjust the path to your script file
- // });
- // const scriptObject = this.scriptBucket.grantRead(instance.role!).upload(scriptAsset);
-  
-
-
-  
-    
-  
     // Webserver create
     const userData = ec2.UserData.forLinux();
     userData.addCommands(
@@ -42,10 +29,11 @@ export class WebServerStack extends cdk.Stack {
 
     );
 
-    const instance = new ec2.Instance(this, 'WebServerInstance', {
+    const Webserverinstance = new ec2.Instance(this, 'WebServerInstance', {
       vpc,
+      vpcSubnets: vpc.selectSubnets({ subnetType: ec2.SubnetType.PUBLIC }),
       instanceType: new ec2.InstanceType('t2.micro'),
-      machineImage: ec2.MachineImage.latestAmazonLinux2(),
+      machineImage: ec2.MachineImage.latestAmazonLinux(),
       securityGroup,
       userData,
     });

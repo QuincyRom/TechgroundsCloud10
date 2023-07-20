@@ -2,8 +2,9 @@ import * as cdk from 'aws-cdk-lib';
 import { VpcStack } from './vpc-stack';
 import { SecurityGroupStack } from './security-group-stack';
 import { WebServerStack } from './web-server-stack';
-//import { LoadBalancerStack } from './load-balancer-stack';
+import { LoadBalancerStack } from './load-balancer-stack';
 import { AdminServerStack } from './admin-server-stack';
+import { DatabaseStack } from './database-stack';
 //import { ScriptBucketStack } from './script-bucket-stack';
 import * as s3 from 'aws-cdk-lib/aws-s3';
 import { Construct} from 'constructs'
@@ -25,11 +26,13 @@ export class ProjectCloudStack extends cdk.Stack {
    const webServerStack = new WebServerStack(this, 'WebServerStack', vpcStack.vpc, securityGroupStack.webServerSecurityGroup, this.scriptBucket);
    
     // de loadbalancer 
-  //  const loadBalancerStack = new LoadBalancerStack(this, 'LoadBalancerStack', vpcStack.vpc, securityGroupStack.webServerSecurityGroup, webServerStack.targetGroup);
+   const loadBalancerStack = new LoadBalancerStack(this, 'LoadBalancerStack', vpcStack.vpc, securityGroupStack.webServerSecurityGroup,);
     
     // de adminserver
     const adminServerStack = new AdminServerStack(this, 'AdminServerStack', vpcStack.vpc, vpcStack.privateSubnetIds);
 
+    //De database
+    new DatabaseStack(this, 'DatabaseStack', { vpc: vpcStack.vpc});
     // de bucket 
    // const scriptBucketStack = new ScriptBucketStack(this, 'ScriptBucketStack');
 

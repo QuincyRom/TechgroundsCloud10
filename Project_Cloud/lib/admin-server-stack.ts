@@ -1,5 +1,6 @@
 import * as cdk from 'aws-cdk-lib';
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
+import { Key } from 'aws-cdk-lib/aws-kms';
 import { Construct} from 'constructs'
 
 export class AdminServerStack extends cdk.Stack {
@@ -16,8 +17,8 @@ export class AdminServerStack extends cdk.Stack {
       instanceType: new ec2.InstanceType('t2.micro'),
       machineImage: ec2.MachineImage.latestWindows(ec2.WindowsVersion.WINDOWS_SERVER_2019_ENGLISH_FULL_BASE), // Specify the desired Windows Server version
       securityGroup,
-      vpcSubnets: { subnets: privateSubnetIds.map(subnetId => ec2.Subnet.fromSubnetId(this, `PrivateSubnet${subnetId}`, subnetId)) },
-      //keyName: 'your-key-pair-name', 
+      vpcSubnets: vpc.selectSubnets({ subnetType: ec2.SubnetType.PRIVATE_ISOLATED }),
+      keyName: 'NewAdminServerKeyPair', 
     });
 
     // Output the instance's private IP address
